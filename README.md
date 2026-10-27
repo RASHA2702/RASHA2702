@@ -38,11 +38,11 @@ I am a full-stack software engineer with **~3 years of commercial experience** d
 - **Capabilities:** Polly exponential backoff with full jitter, linked `CancellationToken` timeouts, percentile metrics (P50/P95/P99 latency), and automated incident generation with self-healing recovery.
 - **Engineering Highlights:** Thread-safe concurrent execution, zero-overhead percentile calculations, RFC 7807 problem details, and 8 automated tests.
 
-#### 3. [DocumentOps — AI-Assisted Document & Invoice Ingestion Engine](https://github.com/RASHA2702/DocumentOps)
-> **Stack:** C# • ASP.NET Core 8 • Clean Architecture • Regex Rules • Pluggable AI • ERP Ingestion  
+#### 3. [DocumentOps — Automated Invoice Ingestion & Verification Engine](https://github.com/RASHA2702/DocumentOps)
+> **Stack:** C# • ASP.NET Core 8 • Clean Architecture • Regex Rules • Pluggable Extractor • ERP Ingestion  
 > **Status:** [![Tests](https://img.shields.io/badge/Tests-19%20Passed-success)](https://github.com/RASHA2702/DocumentOps) [![HITL](https://img.shields.io/badge/Workflow-Human--in--the--Loop-blue)](https://github.com/RASHA2702/DocumentOps/blob/master/docs/ARCHITECTURE.md)
 
-- Enterprise accounts payable ingestion engine combining instant offline deterministic regex parsing with an extensible AI/LLM structured schema pipeline.
+- Enterprise accounts payable ingestion engine combining high-speed deterministic regex parsing with an extensible document intelligence pipeline.
 - **Capabilities:** 7 cross-field invariant rules (including `|Subtotal + Tax - Total| <= 0.01` arithmetic auditing), weighted confidence scoring ($0.00 - 1.00$), Human-in-the-Loop review queue, SHA-256 deduplication, and UBL 2.1 JSON / Ledger CSV export.
 - **Engineering Highlights:** Strict approval barriers blocking unverified financial errors, zero-hallucination deterministic parsing fallback, and 19 automated unit/integration tests.
 
