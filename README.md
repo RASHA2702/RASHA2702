@@ -3,7 +3,7 @@
 
 [![Target Markets](https://img.shields.io/badge/Remote%20Contracts-US%20%7C%20UK%20%7C%20EU%20%7C%20AU%20%7C%20CA-4f46e5?style=for-the-badge)](#)
 [![Primary Stack](https://img.shields.io/badge/Primary%20Stack-.NET%208%20%7C%20C%23%20%7C%20Angular%20%7C%20SQL%20Server-239120?style=for-the-badge)](#)
-[![Automated Tests](https://img.shields.io/badge/Verified%20Tests-85%20Passing-success?style=for-the-badge)](#)
+[![Automated Tests](https://img.shields.io/badge/Verified%20Tests-116%20Passing-success?style=for-the-badge)](#)
 [![Email](https://img.shields.io/badge/Email-rashadhaq7%40gmail.com-D14836?style=for-the-badge&logo=gmail)](mailto:rashadhaq7@gmail.com)
 
 ---
@@ -24,27 +24,27 @@ I am a full-stack software engineer with **~3 years of commercial experience** d
 
 #### 1. [ClientFlow — Client & Project Operations Platform](https://github.com/RASHA2702/ClientFlow)
 > **Stack:** C# 12 • ASP.NET Core 8 • Angular 16 • SQL Server • Clean Architecture • MSTest & Moq  
-> **Status:** [![Tests](https://img.shields.io/badge/Tests-29%20Passed-success)](https://github.com/RASHA2702/ClientFlow) [![Architecture](https://img.shields.io/badge/Architecture-Clean%20%2F%20DDD-green)](https://github.com/RASHA2702/ClientFlow/blob/master/docs/ARCHITECTURE.md)
+> **Status:** [![Tests](https://img.shields.io/badge/Tests-38%20Passed-success)](https://github.com/RASHA2702/ClientFlow) [![Architecture](https://img.shields.io/badge/Architecture-Clean%20%2F%20DDD-green)](https://github.com/RASHA2702/ClientFlow/blob/master/docs/ARCHITECTURE.md)
 
 - Comprehensive operations and contract governance platform for software agencies and consultancies.
-- **Capabilities:** Multi-currency invoice denomination (USD, EUR, GBP, AUD, CAD), milestone budget tracking, 5-stage task Kanban board, task-linked billable time tracking with daily hour caps, automated invoice calculation engine with commercial `AwayFromZero` midpoint rounding, and sanitized CSV reporting (CWE-1236 defense).
-- **Engineering Highlights:** Strict 4-tier Clean Architecture, RFC 9457 `ProblemDetails` error handling, distributed `X-Correlation-ID` tracing, dual-mode persistence (In-Memory + SQL Server LocalDB), and 29 automated unit/service tests.
+- **Capabilities:** Financial mutation idempotency engine (`Idempotency-Key` headers, in-flight concurrency locks, 24h response replay caching, and 409 Conflict protection), sliding-window rate limiting (120 req/min), multi-currency invoice denomination (USD, EUR, GBP, AUD, CAD), milestone budget tracking, 5-stage task Kanban board, task-linked billable time tracking with daily hour caps, automated invoice calculation engine with commercial `AwayFromZero` midpoint rounding, and sanitized CSV reporting (CWE-1236 defense).
+- **Engineering Highlights:** Strict 4-tier Clean Architecture, RFC 9457 `ProblemDetails` error handling, distributed `X-Correlation-ID` tracing, dual-mode persistence (In-Memory + SQL Server LocalDB), and 38 automated unit/service/middleware tests.
 
 #### 2. [IntegrationWatch — Resilient API & Webhook Monitoring Engine](https://github.com/RASHA2702/IntegrationWatch)
 > **Stack:** C# 12 • .NET 8 • Resilience Patterns • Background Workers • Serilog Observability • SQL Server  
-> **Status:** [![Tests](https://img.shields.io/badge/Tests-27%20Passed-success)](https://github.com/RASHA2702/IntegrationWatch) [![Security](https://img.shields.io/badge/Security-SSRF%20Guard-blue)](https://github.com/RASHA2702/IntegrationWatch/blob/master/docs/RESILIENCE.md)
+> **Status:** [![Tests](https://img.shields.io/badge/Tests-38%20Passed-success)](https://github.com/RASHA2702/IntegrationWatch) [![Security](https://img.shields.io/badge/Security-SSRF%20Guard-blue)](https://github.com/RASHA2702/IntegrationWatch/blob/master/docs/RESILIENCE.md)
 
 - High-throughput endpoint health monitoring and synthetic probe scheduler running as a .NET `BackgroundService` with controlled concurrency (`Parallel.ForEachAsync`).
-- **Capabilities:** SSRF prevention engine blocking loopback, private subnets, and cloud metadata (`169.254.169.254`), exponential backoff with jitter on transient codes, linked `CancellationToken` timeouts, NIST Nearest-Rank latency percentiles (P50/P95/P99), and automated incident generation with self-healing recovery.
-- **Engineering Highlights:** Thread-safe concurrent execution, fast failure on deterministic 4xx client errors without wasteful retries, RFC 9457 problem details with internal error sanitization (CWE-209 defense), and 27 automated tests.
+- **Capabilities:** Cryptographically signed outbound webhooks (`HMAC-SHA256` via `X-Signature-SHA256` with constant-time verification against timing attacks), statistical Moving Baseline and $Z$-score latency anomaly detection, automated SLA/SLO compliance and MTTR computation, SSRF prevention engine blocking loopback, private subnets, and cloud metadata (`169.254.169.254`), exponential backoff with jitter on transient codes, linked `CancellationToken` timeouts, NIST Nearest-Rank latency percentiles (P50/P95/P99), and automated incident generation with self-healing recovery.
+- **Engineering Highlights:** Thread-safe concurrent execution, fast failure on deterministic 4xx client errors without wasteful retries, RFC 9457 problem details with internal error sanitization (CWE-209 defense), and 38 automated tests.
 
 #### 3. [DocumentOps — Automated Invoice Ingestion & Verification Engine](https://github.com/RASHA2702/DocumentOps)
 > **Stack:** C# 12 • ASP.NET Core 8 • Clean Architecture • Regex Rules • Pluggable Extractor • ERP Ingestion  
-> **Status:** [![Tests](https://img.shields.io/badge/Tests-29%20Passed-success)](https://github.com/RASHA2702/DocumentOps) [![HITL](https://img.shields.io/badge/Workflow-Human--in--the--Loop-blue)](https://github.com/RASHA2702/DocumentOps/blob/master/docs/ARCHITECTURE.md)
+> **Status:** [![Tests](https://img.shields.io/badge/Tests-40%20Passed-success)](https://github.com/RASHA2702/DocumentOps) [![HITL](https://img.shields.io/badge/Workflow-Human--in--the--Loop-blue)](https://github.com/RASHA2702/DocumentOps/blob/master/docs/ARCHITECTURE.md)
 
 - Enterprise accounts payable ingestion engine combining high-speed deterministic regex parsing with an extensible document intelligence pipeline.
-- **Capabilities:** 9 cross-field invariant rules (including `|Subtotal + Tax - Total| <= 0.01` arithmetic auditing, ISO 4217 currency subunit precision checks, and line item duplicate detection), rule-weighted confidence scoring ($0.00 - 1.00$), Human-in-the-Loop review queue, SHA-256 deduplication, and UBL-modeled JSON / CWE-1236 sanitized CSV export.
-- **Engineering Highlights:** Strict approval barriers blocking unverified financial errors, zero-hallucination deterministic parsing fallback, RFC 9457 problem details, and 29 automated unit/integration tests.
+- **Capabilities:** 10 cross-field invariant rules (including `|Subtotal + Tax - Total| <= 0.01` arithmetic auditing, ISO 4217 currency subunit precision checks, international Tax ID validation for US EIN, UK VAT, EU VAT, and Australian ABN with Modulo-89 checksum verification, and line item duplicate detection), concurrent batch document processing pipeline (`POST /api/documents/batch-upload`) with failure boundary isolation, rule-weighted confidence scoring ($0.00 - 1.00$), Human-in-the-Loop review queue, SHA-256 deduplication, and UBL-modeled JSON / CWE-1236 sanitized CSV export.
+- **Engineering Highlights:** Strict approval barriers blocking unverified financial errors, zero-hallucination deterministic parsing fallback, RFC 9457 problem details, and 40 automated unit/integration tests.
 
 ---
 
@@ -55,8 +55,8 @@ Backend:           C# 12, .NET 8 LTS, ASP.NET Core Web API, Entity Framework Cor
 Frontend:          Angular (14-16), TypeScript, RxJS, HTML5, CSS3/SCSS, Reactive Forms, SaaS UI
 Databases:         Microsoft SQL Server (T-SQL, Stored Procedures, Index Tuning), SQL Server LocalDB
 Architecture:      Clean Architecture, Domain-Driven Design (DDD), Background Services (IHostedService), Resilience Engineering
-Testing:           MSTest, Moq, Integration Testing, TDD (85 Passing Tests Across Portfolio — 100% Pass Rate)
-Security:          CWE-1236 Neutralization, SSRF Prevention, RFC 9457 Problem Details, CWE-209 Info-Leak Defense
+Testing:           MSTest, Moq, Integration Testing, TDD (116 Passing Tests Across Portfolio — 100% Pass Rate)
+Security:          HMAC-SHA256 Signatures, CWE-1236 Neutralization, SSRF Prevention, RFC 9457 Problem Details, CWE-209 Defense
 DevOps & Tooling:  Docker, Docker Compose, GitHub Actions CI/CD, Git, Postman, Linux/Windows
 ```
 
